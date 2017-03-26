@@ -62,6 +62,9 @@ void Guerrero::Estado(WINDOW* w) {
 	// mvwprintw(w, y, x, Data()); //  y, x SON LA POSICION DE LOS ESTADOS DE LOS GUERREROS (TIPO MINECRAFT)
 }
 
+string Guerrero::Data() {
+	return "";
+}
 void Guerrero::subirPuntuacion(int aumento) {
 	if((puntuacion + aumento) >= PUNTUACION_MAXIMA) {
 		nivel++;

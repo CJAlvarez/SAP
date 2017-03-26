@@ -14,7 +14,6 @@ public:
 		Aire(string); // Para Pc
 		~Aire();
 
-		//virtual void Defender(Guerrero*); // DEFINIR ESTE METODO, O SI NO, BORRARLO
 		virtual void Atacar(Guerrero*);			
 		virtual string Data();
 };

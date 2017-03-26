@@ -13,7 +13,6 @@ public:
 		Vacio(string); // Para Pc
 		~Vacio();
 
-		//virtual void Defender(Guerrero*); // DEFINIR ESTE METODO, O SI NO, BORRARLO
 		virtual void Atacar(Guerrero*);			
 		virtual string Data();
 };

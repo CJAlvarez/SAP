@@ -14,7 +14,6 @@ public:
 		Agua(string); // Para Pc
 		~Agua();
 
-		//virtual void Defender(Guerrero*); // DEFINIR ESTE METODO, O SI NO, BORRARLO
 		virtual void Atacar(Guerrero*);			
 		virtual string Data();
 };

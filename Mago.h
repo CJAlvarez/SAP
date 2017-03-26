@@ -13,7 +13,6 @@ public:
 		Mago(string); // Para Pc
 		~Mago();
 
-		//virtual void Defender(Guerrero*); // DEFINIR ESTE METODO, O SI NO, BORRARLO
 		virtual void Atacar(Guerrero*) = 0;
 		virtual string Data();
 };

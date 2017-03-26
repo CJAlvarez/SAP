@@ -13,8 +13,7 @@ public:
 		// @param nombre
 		Fuego(string); // Para Pc
 		~Fuego();
-
-		//virtual void Defender(Guerrero*); // DEFINIR ESTE METODO, O SI NO, BORRARLO
+		
 		virtual void Atacar(Guerrero*);			
 		virtual string Data();
 };

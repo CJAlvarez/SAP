@@ -12,7 +12,6 @@ Mago::~Mago() {
 	this -> Guerrero::~Guerrero();
 }
 
-//void Mago::Defender(Guerrero* g) {} // DEFINIR ESTE METODO, O SI NO, BORRARLO
 string Mago::Data() {
 	return "Mago::";
 }
