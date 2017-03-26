@@ -18,7 +18,7 @@ Personaje::~Personaje() {
 	delete mochila;
 }
 
-string Personaje::Data() {
+string Personaje::Atributos() {
 	stringstream ss;
 	ss << "NOMBRE: " << nombre << "\nFIGURA: " << figura;
 	return ss.str();

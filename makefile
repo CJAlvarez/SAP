@@ -1,19 +1,39 @@
 # makefile
-main.exe: main.o Juego.o Cosa.o Pocion.o P_Salud.o P_Poder.o P_Nivel.o Rollo.o Mochila.o Cartera.o Maleta.o BolsaMagica.o Personaje.o Guerrero.o
-	g++ main.o Juego.o Cosa.o Pocion.o P_Salud.o P_Poder.o P_Nivel.o Rollo.o Mochila.o Cartera.o Maleta.o BolsaMagica.o Personaje.o Guerrero.o -o run -lncurses -lpthread -std=c++0x
+main.exe: main.o Juego.o Cosa.o Pocion.o P_Salud.o P_Poder.o P_Nivel.o Rollo.o Mochila.o Cartera.o Maleta.o BolsaMagica.o Personaje.o Guerrero.o Mago.o Fuego.o Aire.o Tierra.o Agua.o Vacio.o
+	g++ main.o Juego.o Cosa.o Pocion.o P_Salud.o P_Poder.o P_Nivel.o Rollo.o Mochila.o Cartera.o Maleta.o BolsaMagica.o Personaje.o Guerrero.o Mago.o Fuego.o Aire.o Tierra.o Agua.o Vacio.o -o run -lncurses -lpthread -std=c++0x
 
 main.o: main.cpp Juego.h
 	g++ main.cpp -c -lncurses -lpthread -std=c++0x
 
-Juego.o: Juego.h Juego.cpp Guerrero.h
+Juego.o: Juego.h Juego.cpp Agua.h Aire.h
 	g++ Juego.cpp -c -lncurses -lpthread -std=c++0x
 
 # PERSONAJES
 Personaje.o: Personaje.h Personaje.cpp Cartera.h Maleta.h BolsaMagica.h
 	g++ Personaje.cpp -c -lncurses -lpthread -std=c++0x
 
+# GUERREROS
 Guerrero.o: Guerrero.h Guerrero.cpp Personaje.h
-	g++ Guerrero.cpp  -c -lncurses -lpthread -std=c++0x
+	g++ Guerrero.cpp -c -lncurses -lpthread -std=c++0x
+
+# MAGOS
+Mago.o: Mago.h Mago.cpp Guerrero.h
+	g++ Mago.cpp -c -lncurses -lpthread -std=c++0x
+
+Fuego.o: Fuego.h Fuego.cpp Aire.h Mago.h
+	g++ Fuego.cpp -c -lncurses -lpthread -std=c++0x
+
+Aire.o: Aire.h Aire.cpp Tierra.h Mago.h
+	g++ Aire.cpp -c -lncurses -lpthread -std=c++0x
+
+Tierra.o: Tierra.h Tierra.cpp Agua.h Mago.h
+	g++ Tierra.cpp -c -lncurses -lpthread -std=c++0x
+
+Agua.o: Agua.h Agua.cpp Fuego.h Mago.h
+	g++ Agua.cpp -c -lncurses -lpthread -std=c++0x
+
+Vacio.o: Vacio.h Vacio.cpp Mago.h
+	g++ Vacio.cpp -c -lncurses -lpthread -std=c++0x
 
 # COSAS
 Cosa.o: Cosa.h Cosa.cpp

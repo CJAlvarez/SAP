@@ -25,6 +25,7 @@ class Guerrero : public Personaje {
 		vector <int>* arma;
 		int ARMA_ACTUAL;
 		string s_armas[6] = {"Puño", "Fuego", "Tierra", "Agua", "Aire", "Vacio"};
+		virtual string Atributos();
 
 	public:
 		Guerrero(); // Default, para lectura
@@ -33,17 +34,17 @@ class Guerrero : public Personaje {
 		// @param nombre
 		Guerrero(string); // Para Pc
 		~Guerrero();
-
-		//virtual void Defender(Guerrero*); // DEFINIR ESTE METODO, O SI NO, BORRARLO
-		virtual void Atacar(Guerrero*);
+		
+		virtual void Atacar(Guerrero*) = 0;
 		virtual void CambiarArma();
 		virtual void Estado(WINDOW*);
-		virtual string Data();
+		virtual string Data() = 0;
 		virtual void subirPuntuacion(int);
 
 		void SubirNivel();
 		void Morir();
 		string UsarCosa(Cosa*);
+		void RecibirGolpe(int);
 
 		int Poder();
 		int Defensa();

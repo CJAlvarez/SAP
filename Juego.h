@@ -2,7 +2,9 @@
 #ifndef JUEGO_H
 #define JUEGO_H
 
-#include "Guerrero.h"
+#include "Agua.h"
+#include "Aire.h"
+
 
 class Juego {
 public:

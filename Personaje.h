@@ -18,6 +18,7 @@ class Personaje {
 		string nombre;
 		string figura;
 		Mochila* mochila;
+		virtual string Atributos();
 
 	public:
 		Personaje();
@@ -25,7 +26,7 @@ class Personaje {
 		Personaje(string);
 		~Personaje();
 
-		virtual string Data();
+		virtual string Data() = 0;
 
 		int Vivo();
 		int Color();

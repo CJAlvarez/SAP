@@ -7,6 +7,7 @@ Cartera::Cartera() {
 }
 
 Cartera::~Cartera() {
+	this -> Mochila::~Mochila();
 }
 
 void Cartera::Habilidad() {

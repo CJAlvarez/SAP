@@ -7,6 +7,7 @@ BolsaMagica::BolsaMagica() {
 }
 
 BolsaMagica::~BolsaMagica() {
+	this -> Mochila::~Mochila();
 }
 
 void BolsaMagica::Habilidad() {
