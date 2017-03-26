@@ -3,6 +3,8 @@
 #define PERSONAJE_H
 
 #include "Cartera.h"
+#include "Maleta.h"
+#include "BolsaMagica.h"
 
 #include <ncurses.h>
 #include <sstream>

@@ -1,16 +1,16 @@
-// Cartera.h
-#ifndef CARTERA_H
-#define CARTERA_H
+// BolsaMagica.h
+#ifndef BOLSAMAGICA_H
+#define BOLSAMAGICA_H
 
 #include "Mochila.h"
 
-class Cartera : public Mochila {
+class BolsaMagica : public Mochila {
 	// estado
 	// almacenamiento
 	// objetos
 public:
-	Cartera();	
-	~Cartera();
+	BolsaMagica();	
+	~BolsaMagica();
 
 	virtual void Habilidad();
 	virtual void Desgastar(); // HILO

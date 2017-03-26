@@ -1,16 +1,16 @@
-// Cartera.h
-#ifndef CARTERA_H
-#define CARTERA_H
+// Maleta.h
+#ifndef MALETA_H
+#define MALETA_H
 
 #include "Mochila.h"
 
-class Cartera : public Mochila {
+class Maleta : public Mochila {
 	// estado
 	// almacenamiento
 	// objetos
 public:
-	Cartera();	
-	~Cartera();
+	Maleta();	
+	~Maleta();
 
 	virtual void Habilidad();
 	virtual void Desgastar(); // HILO

@@ -1,15 +1,15 @@
 # makefile
-main.exe: main.o Juego.o Cosa.o Pocion.o P_Salud.o P_Poder.o P_Nivel.o Rollo.o Mochila.o Cartera.o Personaje.o Guerrero.o
-	g++ main.o Juego.o Cosa.o Pocion.o P_Salud.o P_Poder.o P_Nivel.o Rollo.o Mochila.o Cartera.o Personaje.o Guerrero.o -o run -lncurses -lpthread -std=c++0x
+main.exe: main.o Juego.o Cosa.o Pocion.o P_Salud.o P_Poder.o P_Nivel.o Rollo.o Mochila.o Cartera.o Maleta.o BolsaMagica.o Personaje.o Guerrero.o
+	g++ main.o Juego.o Cosa.o Pocion.o P_Salud.o P_Poder.o P_Nivel.o Rollo.o Mochila.o Cartera.o Maleta.o BolsaMagica.o Personaje.o Guerrero.o -o run -lncurses -lpthread -std=c++0x
 
 main.o: main.cpp Juego.h
 	g++ main.cpp -c -lncurses -lpthread -std=c++0x
 
-Juego.o: Juego.h Juego.cpp P_Salud.h P_Poder.h P_Nivel.h Rollo.h Cartera.h Guerrero.h
+Juego.o: Juego.h Juego.cpp Guerrero.h
 	g++ Juego.cpp -c -lncurses -lpthread -std=c++0x
 
 # PERSONAJES
-Personaje.o: Personaje.h Personaje.cpp Cartera.h P_Salud.h P_Poder.h P_Nivel.h Rollo.h
+Personaje.o: Personaje.h Personaje.cpp Cartera.h Maleta.h BolsaMagica.h
 	g++ Personaje.cpp -c -lncurses -lpthread -std=c++0x
 
 Guerrero.o: Guerrero.h Guerrero.cpp Personaje.h

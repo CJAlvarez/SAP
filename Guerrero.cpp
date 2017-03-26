@@ -42,33 +42,27 @@ Guerrero::~Guerrero(){
 
 //void Guerrero::Defender(Guerrero* g) {}
 
-void Guerrero::Atacar(Guerrero* g) {
-}
+void Guerrero::Atacar(Guerrero* g) {}
 	
 
-void Guerrero::CambiarArma() {
+void Guerrero::CambiarArma() {}
 
-}
-
-void Guerrero::Estado(WINDOW* w) {
-
-}
+void Guerrero::Estado(WINDOW* w) {}
 
 string Guerrero::Data() {
-
+	return "Guerrero ";
 }
 
-void Guerrero::subirPuntuacion() {
-
-}
+void Guerrero::subirPuntuacion() {}
 
 
 void Guerrero::SubirNivel() {
-
+	nivel++;
 }
 
 void Guerrero::Morir() {
-
+	salud = 0;
+	vivo = 0;
 }
 
 void Guerrero::UsarCosa(Cosa* c) {
