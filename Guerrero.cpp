@@ -41,19 +41,13 @@ Guerrero::~Guerrero(){
 
 
 //void Guerrero::Defender(Guerrero* g) {}
-
 void Guerrero::Atacar(Guerrero* g) {}
-	
-
 void Guerrero::CambiarArma() {}
-
 void Guerrero::Estado(WINDOW* w) {}
-
 string Guerrero::Data() {
 	return "Guerrero ";
 }
-
-void Guerrero::subirPuntuacion() {}
+void Guerrero::subirPuntuacion(int aumento) {}
 
 
 void Guerrero::SubirNivel() {
@@ -65,34 +59,36 @@ void Guerrero::Morir() {
 	vivo = 0;
 }
 
-void Guerrero::UsarCosa(Cosa* c) {
-
+string Guerrero::UsarCosa(Cosa* c) {
+	if(typeid(c) == typeid(Rollo*)) {
+		return c -> Descripcion();		 
+	}
 }
 
 int Guerrero::Poder() {
-
+	return poder;
 }
 
 int Guerrero::Defensa() {
-
+	return defensa;
 }
 
 int Guerrero::Debilidad() {
-
+	return debilidad;
 }
 
 int Guerrero::Salud() {
-
+	return salud;
 }
 
 int Guerrero::Nivel() {
-
+	return nivel;
 }
 
 int Guerrero::Puntuacion() {
-
+	return puntuacion;
 }
 
 int Guerrero::Arma() {
-
+	return ARMA_ACTUAL;
 }

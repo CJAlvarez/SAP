@@ -39,11 +39,11 @@ class Guerrero : public Personaje {
 		virtual void CambiarArma();
 		virtual void Estado(WINDOW*);
 		virtual string Data();
-		virtual void subirPuntuacion();
+		virtual void subirPuntuacion(int);
 
 		void SubirNivel();
 		void Morir();
-		void UsarCosa(Cosa*);
+		string UsarCosa(Cosa*);
 
 		int Poder();
 		int Defensa();
