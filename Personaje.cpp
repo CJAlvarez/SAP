@@ -20,8 +20,12 @@ Personaje::~Personaje() {
 
 string Personaje::Atributos() {
 	stringstream ss;
-	ss << "NOMBRE: " << nombre << "\nFIGURA: " << figura;
+	ss << "\nNOMBRE: " << nombre << "\nFIGURA: " << figura;
 	return ss.str();
+}
+
+void Personaje::Estado(WINDOW* w) {	
+	mvwprintw(w, 0, 0, Data().c_str());
 }
 
 int Personaje::Vivo() {

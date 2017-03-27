@@ -12,6 +12,10 @@ Mago::~Mago() {
 	this -> Guerrero::~Guerrero();
 }
 
+void Mago::Estado(WINDOW* w) {	
+	Guerrero::Estado(w);
+}
+
 string Mago::Data() {
-	return "Mago::";
+	return Guerrero::Data().append("Mago::");
 }

@@ -14,9 +14,9 @@ void Archivo::CrearLog(string nombre, string data) {
 	ofstream file;
 	file.open(ruta);
 	file << Fecha();
+	file << "\n";
 	file << data;
-	file.close();
-	delete[] ruta;
+	file.close();	
 }
 // MAPAS CUADRADOS
 char** Archivo::LeerMapas() {

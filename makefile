@@ -5,7 +5,7 @@ main.exe: main.o Juego.o Archivo.o Cosa.o Pocion.o P_Salud.o P_Poder.o P_Nivel.o
 main.o: main.cpp Juego.h
 	g++ main.cpp -c -lncurses -lpthread -std=c++0x
 
-Juego.o: Juego.h Juego.cpp Archivo.o Agua.h Aire.h Curandero.h Herrero.h Borracho.h Normal.h
+Juego.o: Juego.h Juego.cpp Archivo.o Agua.h Aire.h Vacio.h Curandero.h Herrero.h Borracho.h Normal.h
 	g++ Juego.cpp -c -lncurses -lpthread -std=c++0x
 
 #____________________________________________________________________________________________________

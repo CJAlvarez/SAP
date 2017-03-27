@@ -14,6 +14,7 @@ public:
 		~Mago();
 
 		virtual void Atacar(Guerrero*) = 0;
+		virtual void Estado(WINDOW*);
 		virtual string Data();
 };
 #endif

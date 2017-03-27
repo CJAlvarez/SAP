@@ -4,7 +4,7 @@
 Vacio::Vacio() : Mago() {
 	color = 6;
 	figura = "??";
-	debilidad = 4;
+	debilidad = 4;	
 	arma -> push_back(5);
 } // Default, para lectura
 

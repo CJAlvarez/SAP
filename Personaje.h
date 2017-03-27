@@ -28,6 +28,8 @@ class Personaje {
 
 		virtual string Data() = 0;
 
+		virtual void Estado(WINDOW*);
+
 		int Vivo();
 		int Color();
 		string Nombre();

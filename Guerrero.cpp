@@ -46,9 +46,13 @@ string Guerrero::Atributos() {
 	ss << "\nPUNTUACION: " << puntuacion << "/" << PUNTUACION_MAXIMA << "\nARMA ACTUAL: " << s_armas[ARMA_ACTUAL];
 	ss << "\nARMAS: ";
 	for (int i = 0; i < arma -> size(); ++i) {
-		ss << i << ".- " << s_armas[ARMA_ACTUAL];
-	}
+		ss << "\n" << i << ".- " << s_armas[arma -> at(i)];
+	}	
 	return ss.str();
+}
+
+void Guerrero::Estado(WINDOW* w) {	
+	Personaje::Estado(w);
 }
 
 void Guerrero::CambiarArma() {
@@ -57,9 +61,6 @@ void Guerrero::CambiarArma() {
 	} else {
 		ARMA_ACTUAL++;
 	}
-}
-void Guerrero::Estado(WINDOW* w) {
-	// mvwprintw(w, y, x, Data()); //  y, x SON LA POSICION DE LOS ESTADOS DE LOS GUERREROS (TIPO MINECRAFT)
 }
 
 string Guerrero::Data() {
