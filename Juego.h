@@ -4,6 +4,10 @@
 
 #include "Agua.h"
 #include "Aire.h"
+#include "Curandero.h"
+#include "Herrero.h"
+#include "Borracho.h"
+#include "Normal.h"
 
 class Juego {
 public:

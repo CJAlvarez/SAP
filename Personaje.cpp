@@ -43,3 +43,7 @@ string Personaje::Figura() {
 Mochila* Personaje::MiMochila() {
 	return mochila;
 }
+
+void Personaje::NuevaMochila(Mochila* m) {
+	this -> mochila = m;
+}

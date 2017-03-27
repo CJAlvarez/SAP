@@ -33,5 +33,7 @@ class Personaje {
 		string Nombre();
 		string Figura();
 		Mochila* MiMochila();
+
+		void NuevaMochila(Mochila*);
 };
 #endif

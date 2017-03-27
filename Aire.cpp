@@ -2,17 +2,23 @@
 #include "Aire.h"
 
 Aire::Aire() : Mago() {
+	color = 7;
+	figura = "||";
 	debilidad = 0;
 	arma -> push_back(4);
 } // Default, para lectura
 
 Aire::Aire(string nombre, int poder, int defensa, int salud, int nivel, int puntuacion) 
 : Mago (nombre, poder, defensa, salud, nivel, puntuacion) {
+	color = 7;
+	figura = "||";
 	debilidad = 0;
 	arma -> push_back(4);
 } // Para usuario
 
 Aire::Aire(string nombre) : Mago(nombre) {
+	color = 7;
+	figura = "||";
 	debilidad = 0;
 	arma -> push_back(4);
 } // Para Pc

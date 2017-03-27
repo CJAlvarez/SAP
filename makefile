@@ -1,17 +1,33 @@
 # makefile
-main.exe: main.o Juego.o Cosa.o Pocion.o P_Salud.o P_Poder.o P_Nivel.o Rollo.o Mochila.o Cartera.o Maleta.o BolsaMagica.o Personaje.o Guerrero.o LordDrako.o Mago.o Fuego.o Aire.o Tierra.o Agua.o Vacio.o
-	g++ main.o Juego.o Cosa.o Pocion.o P_Salud.o P_Poder.o P_Nivel.o Rollo.o Mochila.o Cartera.o Maleta.o BolsaMagica.o Personaje.o Guerrero.o LordDrako.o Mago.o Fuego.o Aire.o Tierra.o Agua.o Vacio.o -o run -lncurses -lpthread -std=c++0x
+main.exe: main.o Juego.o Cosa.o Pocion.o P_Salud.o P_Poder.o P_Nivel.o Rollo.o Mochila.o Cartera.o Maleta.o BolsaMagica.o Personaje.o Guerrero.o LordDrako.o Mago.o Fuego.o Aire.o Tierra.o Agua.o Vacio.o Aldeano.o Curandero.o Herrero.o Borracho.o Normal.o
+	g++ main.o Juego.o Cosa.o Pocion.o P_Salud.o P_Poder.o P_Nivel.o Rollo.o Mochila.o Cartera.o Maleta.o BolsaMagica.o Personaje.o Guerrero.o LordDrako.o Mago.o Fuego.o Aire.o Tierra.o Agua.o Vacio.o Aldeano.o Curandero.o Herrero.o Borracho.o Normal.o -o run -lncurses -lpthread -std=c++0x
 
 main.o: main.cpp Juego.h
 	g++ main.cpp -c -lncurses -lpthread -std=c++0x
 
-Juego.o: Juego.h Juego.cpp Agua.h Aire.h
+Juego.o: Juego.h Juego.cpp Agua.h Aire.h Curandero.h Herrero.h Borracho.h Normal.h
 	g++ Juego.cpp -c -lncurses -lpthread -std=c++0x
 
 #____________________________________________________________________________________________________
 # PERSONAJES
 Personaje.o: Personaje.h Personaje.cpp Cartera.h Maleta.h BolsaMagica.h
 	g++ Personaje.cpp -c -lncurses -lpthread -std=c++0x
+
+# ALDEANOS
+Aldeano.o: Aldeano.h Aldeano.cpp Personaje.h
+	g++ Aldeano.cpp -c -lncurses -lpthread -std=c++0x
+
+Curandero.o: Curandero.h Curandero.cpp Aldeano.h
+	g++ Curandero.cpp -c -lncurses -lpthread -std=c++0x
+
+Herrero.o: Herrero.h Herrero.cpp Aldeano.h
+	g++ Herrero.cpp -c -lncurses -lpthread -std=c++0x
+
+Borracho.o: Borracho.h Borracho.cpp Aldeano.h
+	g++ Borracho.cpp -c -lncurses -lpthread -std=c++0x
+
+Normal.o: Normal.h Normal.cpp Aldeano.h
+	g++ Normal.cpp -c -lncurses -lpthread -std=c++0x
 
 # GUERREROS
 Guerrero.o: Guerrero.h Guerrero.cpp Personaje.h

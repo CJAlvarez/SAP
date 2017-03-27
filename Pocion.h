@@ -19,8 +19,8 @@ class Pocion : public Cosa {
 		// potencia
 		Pocion(int);
 	
-		int Potencia();
-		void Mejora(int);
+		virtual int Potencia();
+		virtual void Mejora(int);
 
 		virtual void Fermentar();		
 };

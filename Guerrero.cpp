@@ -87,7 +87,15 @@ void Guerrero::Morir() {
 string Guerrero::UsarCosa(Cosa* c) {
 	if(typeid(c) == typeid(Rollo*)) {
 		return c -> Descripcion();		 
+	} else if(typeid(c) == typeid(P_Salud*)) {
+		salud += static_cast<P_Salud*>(c) -> Potencia();
+	} else if(typeid(c) == typeid(P_Poder*)) {
+		poder += static_cast<P_Poder*>(c) -> Potencia();
+	}else if(typeid(c) == typeid(P_Nivel*)) {
+		nivel += static_cast<P_Nivel*>(c) -> Potencia();
+		PUNTUACION_MAXIMA = (nivel * 1000) + nivel;
 	}
+	return "Pocion Usada";
 }
 
 void Guerrero::RecibirGolpe(int golpe) {

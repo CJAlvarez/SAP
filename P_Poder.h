@@ -4,7 +4,7 @@
 
 #include "Pocion.h"
 
-class P_Poder : Pocion {
+class P_Poder : public Pocion {
 	public:
 		P_Poder();
 		// potencia

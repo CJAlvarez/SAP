@@ -2,17 +2,23 @@
 #include "Vacio.h"
 
 Vacio::Vacio() : Mago() {
+	color = 6;
+	figura = "??";
 	debilidad = 4;
 	arma -> push_back(5);
 } // Default, para lectura
 
 Vacio::Vacio(string nombre, int poder, int defensa, int salud, int nivel, int puntuacion) 
 : Mago (nombre, poder, defensa, salud, nivel, puntuacion) {
+	color = 6;
+	figura = "??";
 	debilidad = 4;
 	arma -> push_back(5);
 } // Para usuario
 
 Vacio::Vacio(string nombre) : Mago(nombre) {
+	color = 6;
+	figura = "??";
 	debilidad = 4;
 	arma -> push_back(5);
 } // Para Pc
