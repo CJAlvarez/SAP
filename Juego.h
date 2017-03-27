@@ -2,6 +2,7 @@
 #ifndef JUEGO_H
 #define JUEGO_H
 
+#include "Archivo.h"
 #include "Agua.h"
 #include "Aire.h"
 #include "Curandero.h"

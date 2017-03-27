@@ -1,11 +1,11 @@
 # makefile
-main.exe: main.o Juego.o Cosa.o Pocion.o P_Salud.o P_Poder.o P_Nivel.o Rollo.o Mochila.o Cartera.o Maleta.o BolsaMagica.o Personaje.o Guerrero.o LordDrako.o Mago.o Fuego.o Aire.o Tierra.o Agua.o Vacio.o Aldeano.o Curandero.o Herrero.o Borracho.o Normal.o
-	g++ main.o Juego.o Cosa.o Pocion.o P_Salud.o P_Poder.o P_Nivel.o Rollo.o Mochila.o Cartera.o Maleta.o BolsaMagica.o Personaje.o Guerrero.o LordDrako.o Mago.o Fuego.o Aire.o Tierra.o Agua.o Vacio.o Aldeano.o Curandero.o Herrero.o Borracho.o Normal.o -o run -lncurses -lpthread -std=c++0x
+main.exe: main.o Juego.o Archivo.o Cosa.o Pocion.o P_Salud.o P_Poder.o P_Nivel.o Rollo.o Mochila.o Cartera.o Maleta.o BolsaMagica.o Personaje.o Guerrero.o LordDrako.o Mago.o Fuego.o Aire.o Tierra.o Agua.o Vacio.o Aldeano.o Curandero.o Herrero.o Borracho.o Normal.o
+	g++ main.o Juego.o Archivo.o Cosa.o Pocion.o P_Salud.o P_Poder.o P_Nivel.o Rollo.o Mochila.o Cartera.o Maleta.o BolsaMagica.o Personaje.o Guerrero.o LordDrako.o Mago.o Fuego.o Aire.o Tierra.o Agua.o Vacio.o Aldeano.o Curandero.o Herrero.o Borracho.o Normal.o -o run -lncurses -lpthread -std=c++0x
 
 main.o: main.cpp Juego.h
 	g++ main.cpp -c -lncurses -lpthread -std=c++0x
 
-Juego.o: Juego.h Juego.cpp Agua.h Aire.h Curandero.h Herrero.h Borracho.h Normal.h
+Juego.o: Juego.h Juego.cpp Archivo.o Agua.h Aire.h Curandero.h Herrero.h Borracho.h Normal.h
 	g++ Juego.cpp -c -lncurses -lpthread -std=c++0x
 
 #____________________________________________________________________________________________________
@@ -89,3 +89,8 @@ P_Poder.o: P_Poder.h P_Poder.cpp Pocion.h
 
 P_Nivel.o: P_Nivel.h P_Nivel.cpp Pocion.h
 	g++ P_Nivel.cpp -c -lpthread -std=c++0x
+
+#____________________________________________________________________________________________________
+# ARCHIVO
+Archivo.o: Archivo.h Archivo.cpp
+	g++ Archivo.cpp -c -std=c++0x
