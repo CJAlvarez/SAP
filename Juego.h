@@ -11,6 +11,7 @@
 #include "Borracho.h"
 #include "Normal.h"
 
+#include <vector>
 
 struct Point {
 	int x;
@@ -21,15 +22,16 @@ class Juego {
 protected:
 	string nombre;
 	vector<char**>* mapas;
+	vector <Personaje*>* personas;
+	Archivo* file;
+
 public:
 	Juego();
 	~Juego();
 
 	int run();
-
-	// x, y
+	
 	void PintarVentana(WINDOW*, int);
-	bool AjustarVentana(int, int);
 };
 
 #endif

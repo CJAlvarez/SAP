@@ -7,7 +7,7 @@ Personaje::Personaje() {
 	nombre = figura = "";
 }
 
-Personaje::Personaje(string nombre) {
+Personaje::Personaje(string nombre) {	
 	color = 0;
 	vivo = 1;
 	figura = "";
