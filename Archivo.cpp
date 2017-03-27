@@ -16,6 +16,7 @@ void Archivo::CrearLog(string nombre, string data) {
 	file << Fecha();
 	file << data;
 	file.close();
+	delete[] ruta;
 }
 // MAPAS CUADRADOS
 char** Archivo::LeerMapas() {

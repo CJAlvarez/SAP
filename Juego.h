@@ -10,6 +10,11 @@
 #include "Borracho.h"
 #include "Normal.h"
 
+struct Mapas {
+	
+	vector<char**>* mapas;
+};
+
 class Juego {
 public:
 	Juego();

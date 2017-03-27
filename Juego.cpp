@@ -1,13 +1,9 @@
 // Juego.cpp
 #include "Juego.h"
 
-Juego::Juego(){
+Juego::Juego(){}
 
-}
-
-Juego::~Juego() {
-
-}
+Juego::~Juego() {}
 struct Point {
 	int x;
 	int y;
